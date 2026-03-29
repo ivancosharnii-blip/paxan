@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+/* База совпадает с первой палитрой темы («Персик») из lib/theme-palettes.ts */
+:root {
+  --background: #fff5f2;
+  --foreground: #342524;
+  --primary: #c65d48;
+  --primary-foreground: #fff8f6;
+  --muted-foreground: #6b534e;
+  --border: #f0c9bc;
+  --accent: #fff0ea;
+  --accent-foreground: #4a3532;
+  --muted: #fdeae4;
+  --ring: #e8927a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-ring: var(--ring);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-heading);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading), ui-serif, Georgia, serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--primary) 26%, transparent);
+  color: var(--foreground);
+}
